@@ -14,13 +14,13 @@ import HeroBanner from "../components/HeroBanner.astro"
 		<title>Home Page - AstroTips</title>
 	</head> 
 	<body class="bg-[#03030E] min-h-screen">
-		 <div class="relative bg-cover bg-center bg-fixed min-h-screen" style="background-image: url('/public/GradientBackground.jpg');">
+		<div class="relative bg-cover min-h-screen" style="background-image: url('/public/GradientBackground.jpg');">
             <Navbar />
             <HeroBanner />
 
-			<main class="max-w-4xl relative z-10">
-				<slot />
-			</main>
+            <main class="max-w-5xl mx-auto px-4 py-8 flex flex-col gap-60">
+                <slot />
+            </main>
         </div>
 
 
