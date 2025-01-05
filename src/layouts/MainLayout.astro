@@ -2,6 +2,8 @@
 import Navbar from '../components/Navbar.astro'
 import Footer from '../components/Footer.astro'
 
+import ClientRouter from 'astro/components/ClientRouter.astro'
+
 interface Props {
 	title: string,
 	description: string
@@ -17,6 +19,8 @@ const { title, description } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
+
+		<ClientRouter />
 		
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
