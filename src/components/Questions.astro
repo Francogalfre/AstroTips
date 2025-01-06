@@ -1,3 +1,10 @@
+---
+import InteractiveHoverButton from "./ui/interactive-hover-button"
+
+import { DotPattern } from "./ui/dot-pattern";
+import { cn } from "@/lib/utils";
+---
+
 <section class="relative w-full h-screen mb-32 text-white flex flex-col gap-80">
     <div class="flex flex-col gap-6 justify-start text-start">
         <h1 class="text-5xl font-semibold ">¿Que es Astro?</h1>
@@ -7,8 +14,16 @@
             <br />
             Astro permite trabajar con diferentes tecnologías, como React, Vue o Svelte, dentro de un solo proyecto, lo que lo hace flexible y adaptable a distintas necesidades. También es ideal para proyectos centrados en contenido, ya que puede cargar datos desde APIs, CMS o archivos locales.
         </p>
-        <a href="https://astro.build" class="inline-flex max-w-[200px] justify-center rounded-full px-5 py-2.5 text-[18px] font-medium border-2 border-slate-600 hover:bg-slate-600 transition-colors">Mas Informacion</a>
+        
+        <a href="https://astro.build" ><InteractiveHoverButton text="Mas Informacion" /></a>
     </div>
+
+    <DotPattern
+        className={cn(
+        "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
+        )}
+    />
+
     <div class="flex flex-col gap-6 justify-end text-end">
         <h1 class="text-5xl font-semibold ">¿Por que debería usar AstroTips?</h1>
         <p class="text-xl font-thin text-gray-200 leading-9">
