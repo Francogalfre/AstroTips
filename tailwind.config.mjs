@@ -1,3 +1,5 @@
+import typografy from "@tailwindcss/typography";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
@@ -63,7 +65,8 @@ export default {
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
   			meteor: 'meteor 5s linear infinite',
-  			grid: 'grid 15s linear infinite'
+  			grid: 'grid 15s linear infinite',
+  			gradient: 'gradient 8s linear infinite'
   		},
   		keyframes: {
   			rainbow: {
@@ -123,9 +126,14 @@ export default {
   				'100%': {
   					transform: 'translateY(0)'
   				}
+  			},
+  			gradient: {
+  				to: {
+  					backgroundPosition: 'var(--bg-size) 0'
+  				}
   			}
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), typografy],
 };

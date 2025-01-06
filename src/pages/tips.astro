@@ -1,29 +1,21 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 
-import Search from "../components/Search.astro";
-
-import { tips } from "@/utils/tipsData";
+import Search from "@/components/Search.astro";
+import TipsAccordion from "@/components/TipsAccordion.tsx";
 ---
 
 <MainLayout
-	title='Tips Page | AstroTips - Los Mejores Tips & Tricks para Astro'
-	description='AstroTips es un proyecto creado para compartir consejos, recursos y ejemplos de código sobre Astro, la nueva tecnología de construcción de sitios web.'
+  title="Tips Page | AstroTips - Los Mejores Tips & Tricks para Astro"
+  description="AstroTips es un proyecto creado para compartir consejos, recursos y ejemplos de código sobre Astro, la nueva tecnología de construcción de sitios web."
 >
-	<div class="relative bg-cover min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#080929_40%,#8960FF_100%)]">
-        <span class="text-gray-200 font-light text-center flex flex-col pt-10 text-xl">
-			Encuentra consejos y trucos para mejorar tu desarrollo con Astro y crear sitios más rápidos.
-		</span>
-		<Search />
+  <section
+    class="relative bg-cover min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#080929_40%,#8960FF_100%)]"
+  >
+    <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col">
+      <Search />
 
-		<div class="text-white">
-			{
-				tips.map((tip) => (
-					<h1>{tip.title}</h1>
-					<p>{tip.description}</p>
-				))
-			}
-		</div>
-
-	</div>
+      <TipsAccordion client:load />
+    </div>
+  </section>
 </MainLayout>

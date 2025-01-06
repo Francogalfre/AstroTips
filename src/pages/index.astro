@@ -1,25 +1,22 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro'
+import MainLayout from "../layouts/MainLayout.astro";
 
-import Questions from '../components/Questions.astro'
-import AboutCard from '../components/AboutCard.astro'
-import HeroBanner from '../components/HeroBanner.astro'
-import CTA from '../components/CTA.astro'
+import Questions from "../components/Questions.astro";
+import AboutCard from "../components/AboutCard.astro";
+import HeroBanner from "../components/HeroBanner.astro";
+import CTA from "../components/CTA.astro";
 ---
 
-<MainLayout 
-	title='Home Page | AstroTips - Los Mejores Tips & Tricks para Astro'
-	description='AstroTips es un proyecto creado para compartir consejos, recursos y ejemplos de código sobre Astro, la nueva tecnología de construcción de sitios web.'
+<MainLayout
+  title="Home Page | AstroTips - Los Mejores Tips & Tricks para Astro"
+  description="AstroTips es un proyecto creado para compartir consejos, recursos y ejemplos de código sobre Astro, la nueva tecnología de construcción de sitios web."
 >
-	<div class="relative bg-cover min-h-screen" style="background-image: url('/public/GradientBackground.jpg');">
-		<main class="max-w-6xl mx-auto px-4 py-8 flex flex-col">
-			<HeroBanner />
-			<Questions />
-			<AboutCard />
-		</main>
-		<CTA />
-	</div>
+  <div class="relative bg-cover min-h-screen" style="background-image: url('/public/GradientBackground.jpg');">
+    <main class="max-w-6xl mx-auto px-4 py-8 flex flex-col">
+      <HeroBanner />
+      <Questions />
+      <AboutCard />
+    </main>
+    <CTA />
+  </div>
 </MainLayout>
-
-
-

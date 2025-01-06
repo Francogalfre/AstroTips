@@ -1,15 +1,16 @@
 ---
-import SearchIcon from "../../public/icons/SearchIcon.astro"
+import { Search as LucideSearch } from "lucide-react";
 ---
 
-<form action="" class="justify-center flex pt-10">
-    <div class="relative flex items-center">
-        <SearchIcon />
-        <input 
-            type="text" 
-            name="search" 
-            placeholder='Busca un tip...'
-            class="pl-12 pr-6 py-3 text-xl text-gray-200 rounded-full bg-[#241635a9] focus:outline-none"
-        >
-    </div>
+<form class="justify-center flex pt-6">
+  <div class="relative flex items-center">
+    <LucideSearch className="absolute left-4 text-gray-400 size-5 shrink-0 transition-transform duration-200" />
+
+    <input
+      type="text"
+      name="search"
+      placeholder="Sobre que te gustaria aprender hoy?"
+      class="pl-12 pr-6 py-3 text-xl text-gray-200 rounded-full w-[500px] bg-[#241635a9] focus:outline-none border border-gray-700 border-[#241635a9] focus:border-gray-600 transition-colors duration-200"
+    />
+  </div>
 </form>
