@@ -1,4 +1,21 @@
-<div>
-    Error 404
-    <a href="/">Inicio</a>
-</div>
+---
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import MainLayout from "@/layouts/MainLayout.astro";
+---
+
+<MainLayout title="404 Error - Pagina no Disponible | AstroTips - Los Mejores Tips & Tricks para Astro">
+  <section class="[background:radial-gradient(125%_125%_at_50%_10%,#080929_40%,#8960FF_100%)]">
+    <div
+      class="relative z-10 flex flex-col justify-center items-center min-h-screen text-center text-white px-4 gap-8 bottom-[100px]"
+    >
+      <img src="/Illustration404.png" alt="Astro Logo" class="h-56 animate-bounceY transition" />
+      <div>
+        <h1 class="text-6xl font-bold text-white">Oops! La pagina que buscas no existe</h1>
+        <p class="mt-4 text-2xl font-thin text-gray-200 leading-9">
+          La página pudo haber sido eliminada o el enlace que seguiste es incorrecto.
+        </p>
+      </div>
+      <a href="/"><RainbowButton>Volver a Pagina Principal</RainbowButton></a>
+    </div>
+  </section>
+</MainLayout>

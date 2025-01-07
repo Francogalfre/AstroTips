@@ -8,10 +8,9 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 
 interface Props {
   title: string;
-  description: string;
 }
 
-const { title, description } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,7 +19,10 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+    <meta
+      name="description"
+      content={"AstroTips es un proyecto creado para compartir consejos, recursos y ejemplos de código sobre Astro, la nueva tecnología de construcción de sitios web."}
+    />
 
     <ClientRouter />
 
