@@ -67,6 +67,7 @@
     --color-5: 90 100% 63%;
   }
 }
+
 @layer base {
   * {
     @apply border-border;
