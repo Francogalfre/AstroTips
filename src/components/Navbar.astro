@@ -1,11 +1,27 @@
-<nav class="bg-[#080929] py-6 flex justify-center items-center gap-6 sticky top-0 z-20 backdrop-filter backdrop-blur-lg bg-opacity-30">
-    <div class="flex gap-2 items-center">
-        <img src="/NavStar.svg" alt="AstroTips Logo" class="w-6 h-6" />
-        <h1 class="text-white font-semibold text-2xl">AstroTips</h1>
-    </div>
-    <ul class="flex gap-6 items-center pt-1">
-        <li class="text-white text-lg font-semibold"><a href="/">Home</a></li>
-        <li class="text-gray-200 text-lg font-medium"><a href="/tips">Tips</a></li>
-        <li class="text-gray-200 text-lg font-medium"><a href="https://www.github.com/Francogalfre">Contactar</a></li>
-    </ul>
+---
+const { pathname } = Astro.url;
+
+const isActive = (path: string) => {
+  return pathname === path ? "text-white font-semibold text-lg" : "text-gray-200 font-medium text-lg";
+};
+---
+
+<nav
+  class="bg-[#080929] py-6 flex justify-center items-center gap-6 sticky top-0 z-20 backdrop-filter backdrop-blur-lg bg-opacity-30"
+>
+  <div class="flex gap-2 items-center">
+    <img src="/NavStar.svg" alt="AstroTips Logo" class="w-6 h-6" />
+    <h1 class="text-white font-semibold text-2xl">AstroTips</h1>
+  </div>
+  <ul class="flex gap-6 items-center pt-1">
+    <li class={isActive("/")}>
+      <a href="/">Home</a>
+    </li>
+    <li class={isActive("/tips")}>
+      <a href="/tips">Tips</a>
+    </li>
+    <li class="text-gray-200 text-lg font-medium">
+      <a href="https://www.github.com/Francogalfre">Contactar</a>
+    </li>
+  </ul>
 </nav>
