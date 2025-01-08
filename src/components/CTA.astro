@@ -1,17 +1,22 @@
 ---
-import InteractiveHoverButton from "./ui/interactive-hover-button"
-import RetroGrid from "./ui/retro-grid"
+import InteractiveHoverButton from "./ui/interactive-hover-button";
+import RetroGrid from "./ui/retro-grid";
 ---
 
-<section class="relative bg-cover h-96 flex justify-center items-center flex-col text-center gap-8 w-full bg-[#100d2a59]" style="background-image: url('/public/BackgroundCTA.png');">
-    <div>
-        <h1 class="text-5xl font-bold text-white">¡Comienza a Aprender sobre Astro ahora!</span></h1>
-        <p class="mt-4 text-xl font-thin text-gray-200 leading-9">
-            Explora los consejos y recursos de AstroTips para mejorar tus habilidades en desarrollo web con Astro. 
-            <br/>
-            Descubre nuevas técnicas y trucos que te ayudarán a crear sitios web más rápidos y eficientes.
-        </p>
-    </div>
-    <a  href="/tips"><InteractiveHoverButton text="Empieza Ahora!" /></a>
-    <RetroGrid />
+<section
+  class="relative bg-cover h-96 flex justify-center items-center flex-col text-center gap-8 w-full bg-[#100d2a59]"
+  style="background-image: url('/BackgroundCTA.png');"
+>
+  <div>
+    <h1 class="text-5xl font-bold text-white">¡Comienza a Aprender sobre Astro ahora!</h1>
+  </div>
+  <p class="mt-4 text-xl font-thin text-gray-200 leading-9">
+    Explora los consejos y recursos de AstroTips para mejorar tus habilidades en desarrollo web con Astro.
+    <br />
+    Descubre nuevas técnicas y trucos que te ayudarán a crear sitios web más rápidos y eficientes.
+  </p>
+
+  <RetroGrid />
+
+  <a href="/tips"><InteractiveHoverButton text="Empieza Ahora!" /></a>
 </section>

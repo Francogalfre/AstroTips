@@ -1,18 +1,46 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
-
-import Search from "@/components/Search.astro";
 import TipsAccordion from "@/components/TipsAccordion.tsx";
+
+import { LucideSearch } from "lucide-react";
+import { TIPS } from "@/lib/data";
 ---
 
 <MainLayout title="Tips Page | AstroTips - Los Mejores Tips & Tricks para Astro">
   <section
-    class="relative bg-cover min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#080929_40%,#8960FF_100%)] bg-center bg-fixed"
+    class="relative bg-cover min-h-screen [background:radial-gradient(125%_125%_at_20%_10%,#080929_10%,#8860ff6b_100%)] bg-center bg-fixed"
   >
     <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col">
-      <Search client:load />
+      <form class="justify-center flex pt-6">
+        <div class="relative flex items-center">
+          <LucideSearch className="absolute left-4 text-gray-400 size-5 shrink-0 transition-transform duration-200 " />
 
-      <TipsAccordion client:load />
+          <input
+            type="text"
+            name="search"
+            placeholder="Sobre que te gustaria aprender hoy?"
+            class="pl-12 pr-6 py-3 text-xl text-gray-200 rounded-full w-[500px] bg-[#241635a9] focus:outline-none border border-gray-700 border-[#241635a9] focus:border-gray-600 transition-colors duration-200"
+          />
+        </div>
+      </form>
+
+      <TipsAccordion tips={TIPS} client:only />
     </div>
   </section>
 </MainLayout>
+
+<script>
+  const form = document.querySelector("form");
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const search = formData.get("search")!.toString().toLowerCase();
+
+    const url = new URL("/tips", window.location.origin);
+    url.searchParams.set("search", search);
+
+    window.location.assign(url.toString());
+  });
+</script>
