@@ -2,7 +2,7 @@ export interface Tip {
   id: number;
   title: string;
   content: string;
-  example?: string;
+  example: string;
 }
 
 export const TIPS: Tip[] = [
