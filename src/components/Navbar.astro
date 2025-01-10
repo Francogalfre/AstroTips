@@ -3,8 +3,8 @@ const { pathname } = Astro.url;
 
 const isActive = (path: string) => {
   return pathname === path
-    ? "text-white font-semibold text-md md:text-lg"
-    : "text-gray-200 font-medium text-md md:text-lg hover:text-[#e1c2f7] transition-colors";
+    ? "text-white font-semibold text-md sm:text-lg"
+    : "text-gray-200 font-medium text-md sm:text-lg hover:text-[#e1c2f7] transition-colors";
 };
 ---
 
@@ -12,18 +12,18 @@ const isActive = (path: string) => {
   class="bg-[#0b0c38] py-6 flex justify-center items-center gap-6 sticky top-0 z-20 backdrop-filter backdrop-blur-lg bg-opacity-30"
 >
   <div class="flex gap-2 items-center">
-    <img src="/NavStar.webp" alt="AstroTips Logo" class="size-4 md:size-6" />
-    <a href="/" class="text-white font-semibold text-xl md:text-2xl">AstroTips</a>
+    <img src="/NavStar.webp" alt="AstroTips Logo" class="size-4 sm:size-6" />
+    <a href="/" class="text-white font-semibold text-xl sm:text-2xl" aria-label="Ir a la página principal">AstroTips</a>
   </div>
   <ul class="flex gap-6 items-center pt-1">
     <li class={isActive("/")}>
-      <a href="/">Home</a>
+      <a href="/" aria-label="Ir a la página principal">Home</a>
     </li>
     <li class={isActive("/tips")}>
-      <a href="/tips">Tips</a>
+      <a href="/tips" aria-label="Ir a la página de Tips">Tips</a>
     </li>
-    <li class="text-gray-200 text-lg font-medium hover:text-[#e1c2f7] transition-colors">
-      <a href="https://www.github.com/Francogalfre">Contactar</a>
+    <li class="text-gray-200 text-md sm:text-lg font-medium hover:text-[#e1c2f7] transition-colors">
+      <a href="https://www.github.com/Francogalfre" aria-label="Ir a Perfil de Github">Contactar</a>
     </li>
   </ul>
 </nav>

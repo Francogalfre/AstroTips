@@ -5,32 +5,42 @@ import AnimatedGradientText from "./ui/animated-gradient-text";
 import { RainbowButton } from "./ui/rainbow-button";
 ---
 
-<section class="relative w-full h-screen bg-cover bg-center">
+<section
+  class="relative w-full min-h-[100vh] sm:min-h-[70vh] md:min-h-screen bg-cover bg-center top-6 md:top-24 lg:top-44 flex justify-center bg-hero-pattern"
+>
   <div
-    class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white px-4 gap-8 bottom-[100px]"
+    class="relative z-10 flex flex-col justify-center items-center h-full text-center text-white gap-6 sm:gap-6 md:gap-8"
   >
-    <img src="/AstroIcon.webp" alt="Astro Logo" class="w-32 h-36" />
-    <div>
-      <h1 class="text-8xl font-bold text-white flex items-center">
+    <img
+      src="/AstroIcon.webp"
+      alt="Logo de AstroTips, un ícono con la letra A en un fondo azul oscuro"
+      class="w-20 h-24 sm:w-28 sm:h-32 animate-bounce-up-down"
+      loading="lazy"
+    />
+    <div class="px-4">
+      <h1
+        class="text-4xl sm:text-5xl md:text-[84px] font-bold text-white flex flex-col lg:flex-row items-center text-center justify-center gap-5 sm:gap-3"
+      >
         Bienvenido a
         <AnimatedGradientText>
           <span
             class={cn(
-              `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent border-none text-8xl font-extrabold`
+              `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent border-none text-7xl sm:text-8xl md:text-[84px] font-extrabold`
             )}
           >
             AstroTips
           </span>
         </AnimatedGradientText>
       </h1>
-      <p class="mt-4 text-2xl font-thin text-gray-200 leading-9">
-        Descubre cómo optimizar tus proyectos en Astro con consejos prácticos,
-        <br />
-        mejores prácticas y recursos diseñados para ayudarte a crear aplicaciones
-        <br />
-        rápidas, escalables y fáciles de mantener.
+      <p
+        class="mt-4 text-md sm:text-xl md:text-2xl font-extralight text-gray-200 leading-7 sm:leading-8 md:leading-9 break-words"
+      >
+        Descubre cómo optimizar tus proyectos en Astro con consejos prácticos, mejores prácticas y recursos diseñados
+        para ayudarte a crear aplicaciones rápidas, escalables y fáciles de mantener.
       </p>
     </div>
-    <a href="/tips"><RainbowButton>Dirigirse a los Tips</RainbowButton></a>
+    <a href="/tips" aria-label="Ver todos los consejos de AstroTips"
+      ><RainbowButton>Dirigirse a los Tips</RainbowButton></a
+    >
   </div>
 </section>

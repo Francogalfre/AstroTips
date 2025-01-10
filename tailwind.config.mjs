@@ -59,6 +59,7 @@ export default {
         "color-5": "hsl(var(--color-5))",
       },
       animation: {
+        "bounce-up-down": "bounceUpDown 1.5s ease-in-out infinite",
         rainbow: "rainbow var(--speed, 2s) infinite linear",
         "shiny-text": "shiny-text 8s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -69,6 +70,14 @@ export default {
         gradient: "gradient 8s linear infinite",
       },
       keyframes: {
+        bounceUpDown: {
+          "0%, 100%": {
+            transform: "translateY(0)", // Posición inicial
+          },
+          "50%": {
+            transform: "translateY(-10px)", // Subir 10px
+          },
+        },
         rainbow: {
           "0%": {
             "background-position": "0%",
