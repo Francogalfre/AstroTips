@@ -8,18 +8,21 @@ import { TIPS } from "@/lib/data";
 
 <MainLayout title="Tips Page | AstroTips - Los Mejores Tips & Tricks para Astro">
   <section
-    class="relative bg-cover min-h-screen [background:radial-gradient(125%_125%_at_20%_10%,#080929_10%,#8860ff6b_100%)] bg-center bg-fixed"
+    class="relative bg-cover min-h-screen bg-center bg-fixed"
+    style="background: radial-gradient(125% 125% at 20% 10%, #080929 10%, #8860ff6b 100%)"
   >
     <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col">
-      <form class="justify-center flex pt-6 pb-6">
-        <div class="relative flex items-center">
-          <LucideSearch className="absolute left-4 text-gray-400 size-5 shrink-0 transition-transform duration-200 " />
-
+      <form class="flex justify-center pt-6 pb-6" aria-labelledby="search-form" role="search">
+        <div class="relative flex items-center w-full max-w-3xl">
+          <LucideSearch className="absolute left-4 text-gray-400 size-5 shrink-0 transition-transform duration-200" />
           <input
+            id="search-input"
             type="text"
             name="search"
-            placeholder="Sobre que te gustaria aprender hoy?"
-            class="pl-12 pr-6 py-3 text-xl text-gray-200 rounded-full w-[500px] bg-[#241635a9] focus:outline-none border border-gray-700 border-[#241635a9] focus:border-gray-600 transition-colors duration-200"
+            placeholder="Sobre qué te gustaría aprender hoy?"
+            class="pl-12 pr-6 py-3 text-md sm:text-xl text-gray-200 rounded-full w-full bg-[#241635a9] focus:outline-none border border-gray-700 focus:border-gray-600 transition-colors duration-200"
+            aria-label="Buscar consejo o recurso"
+            aria-describedby="search-help-text"
           />
         </div>
       </form>
