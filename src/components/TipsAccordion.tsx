@@ -1,4 +1,3 @@
-import { div } from "motion/react-client";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion.tsx";
 import { Badge } from "./ui/badge.tsx";
 
@@ -23,15 +22,22 @@ const MyAccordion = ({ tips }: { tips: Tip[] }) => {
         <div>
           <Accordion type="single" collapsible defaultValue={`item-${tips[0].id}`} className="px-2">
             {finalTips.map((tip) => (
-              <AccordionItem value={`item-${tip.id}`} key={tip.id} className="border-b border-gray-500 pb-10 pt-10">
+              <AccordionItem
+                value={`item-${tip.id}`}
+                key={tip.id}
+                className="border-b border-gray-500 pb-10 pt-10 w-full"
+              >
                 <AccordionTrigger className="text-xl">
                   <Badge variant={"outline"} className="text-gray-300 text-sm sm:text-lg font-medium">
                     Tip {tip.id}
                   </Badge>
                 </AccordionTrigger>
                 <h2 className="text-white text-2xl sm:text-3xl font-bold">{tip.title}</h2>
-                <AccordionContent className="text-base sm:text-xl prose-2xl text-gray-300 whitespace-pre-line">
+                <AccordionContent className="text-base sm:text-xl prose-2xl w-full text-gray-300 whitespace-pre-line">
                   {tip.content}
+                  <pre className="prose bg-gray-900 text-white p-2 rounded-xl overflow-auto mt-6 mb-4 w-full">
+                    <code className="text-gray-300 text-start text-sm block whitespace-pre-wrap">{tip.example}</code>
+                  </pre>
                 </AccordionContent>
               </AccordionItem>
             ))}
