@@ -1,33 +1,37 @@
 ---
-import InteractiveHoverButton from "./ui/interactive-hover-button"
+import InteractiveHoverButton from "./ui/interactive-hover-button";
 
 import { DotPattern } from "./ui/dot-pattern";
 import { cn } from "@/lib/utils";
 ---
 
-<section class="relative w-full h-screen mb-32 text-white flex flex-col gap-80">
-    <div class="flex flex-col gap-6 justify-start text-start">
-        <h1 class="text-5xl font-semibold ">¿Que es Astro?</h1>
-        <p class="text-xl font-thin text-gray-200 leading-9">
-            Astro es un framework moderno para crear sitios web rápidos y optimizados. Su principal ventaja es que renderiza contenido en el servidor, enviando solo HTML al navegador, lo que mejora el rendimiento al reducir la carga de JavaScript innecesaria.
-            <br />
-            <br />
-            Astro permite trabajar con diferentes tecnologías, como React, Vue o Svelte, dentro de un solo proyecto, lo que lo hace flexible y adaptable a distintas necesidades. También es ideal para proyectos centrados en contenido, ya que puede cargar datos desde APIs, CMS o archivos locales.
-        </p>
-        
-        <a href="https://astro.build" ><InteractiveHoverButton text="Mas Informacion" /></a>
-    </div>
+<section class="relative w-full px-4 h-auto mb-32 text-white flex flex-col gap-80">
+  <div class="flex flex-col gap-6 justify-start text-start">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold">¿Qué es Astro?</h2>
+    <p class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 leading-8 sm:leading-9 md:leading-10">
+      Astro es un framework moderno para crear sitios web rápidos y optimizados. Su principal ventaja es que renderiza
+      contenido en el servidor, enviando solo HTML al navegador, lo que mejora el rendimiento al reducir la carga de
+      JavaScript innecesaria.
+      <br />
+      <br />
+      Astro permite trabajar con diferentes tecnologías, como React, Vue o Svelte, dentro de un solo proyecto, lo que lo
+      hace flexible y adaptable a distintas necesidades. También es ideal para proyectos centrados en contenido, ya que puede
+      cargar datos desde APIs, CMS o archivos locales.
+    </p>
 
-    <DotPattern
-        className={cn(
-        "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]",
-        )}
-    />
+    <a href="https://astro.build" target="_blank" rel="noopener noreferrer">
+      <InteractiveHoverButton text="Más Información" />
+    </a>
+  </div>
 
-    <div class="flex flex-col gap-6 justify-end text-end">
-        <h1 class="text-5xl font-semibold ">¿Por que debería usar AstroTips?</h1>
-        <p class="text-xl font-thin text-gray-200 leading-9">
-            En AstroTips, encontrarás consejos prácticos para mejorar tu flujo de trabajo con Astro, buenas prácticas para optimizar el rendimiento de tus sitios, y ejemplos de código que podrás usar en tus proyectos. Además, formarás parte de una comunidad activa de desarrolladores que comparten recursos y conocimientos sobre Astro.
-        </p>
-    </div>
+  <DotPattern className={cn("[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]")} />
+
+  <div class="flex flex-col gap-6 justify-end text-end">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold">¿Por qué debería usar AstroTips?</h2>
+    <p class="text-lg sm:text-xl md:text-2xl font-light text-gray-200 leading-8 sm:leading-9 md:leading-10">
+      En AstroTips, encontrarás consejos prácticos para mejorar tu flujo de trabajo con Astro, buenas prácticas para
+      optimizar el rendimiento de tus sitios, y ejemplos de código que podrás usar en tus proyectos. Además, formarás
+      parte de una comunidad activa de desarrolladores que comparten recursos y conocimientos sobre Astro.
+    </p>
+  </div>
 </section>

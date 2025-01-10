@@ -2,38 +2,48 @@
 import { BorderBeam } from "./ui/border-beam";
 ---
 
-<section class="relative bg-cover w-full mb-32 items-center text-white flex flex-col gap-80 rounded-xl">
+<section class="relative bg-cover w-full mb-32 items-center text-white py-36 px-3">
   <div
-    class="h-full w-full bg-gradient-to-tr from-[#ffffff0e] to-transparent from-0% rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md border border-transparent p-10"
-    style="border-image: linear-gradient(to bottom left, #2D2163, #ffffff1e) 1;"
+    class="h-full w-full bg-gradient-to-tr from-[#ffffff0e] to-transparent from-0% bg-clip-padding backdrop-filter backdrop-blur-md border border-transparent p-6 sm:p-8 lg:p-10"
+    style="border-image: linear-gradient(to bottom left, #2D2163, #ffffff1e) 1"
   >
-    <div class="flex flex-col gap-10">
-      <div class="flex gap-5">
-        <a href="https://github.com/Francogalfre"
-          ><img src="/Avatar.webp" alt="Foto de Perfil de Github de Franco Galfre" class="w-16 h-16 rounded-full" /></a
-        >
+    <div class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
+      <header class="flex gap-4 sm:gap-5 items-center">
+        <a href="https://github.com/Francogalfre" aria-label="Perfil de Github de Franco Galfre">
+          <img
+            src="/Avatar.webp"
+            alt="Foto de perfil de Franco Galfre, desarrollador web y diseñador UI/UX"
+            class="w-16 h-16 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          />
+        </a>
         <div class="flex flex-col justify-between">
-          <span class="text-2xl font-semibold">Franco Galfre</span>
+          <span class="text-2xl sm:text-3xl font-semibold">Franco Galfre</span>
           <span class="text-lg font-light text-gray-200">Desarrollador Web - Diseñador UI/UX</span>
         </div>
-      </div>
-      <p class="text-xl font-thin text-gray-200 leading-9">
-        Soy un desarrollador web apasionado por las tecnologías modernas, y este proyecto lo creé como una forma de
-        practicar Astro mientras comparto mis conocimientos con otros. Mi objetivo es enseñar a los desarrolladores a
-        aprovechar las ventajas de Astro para crear sitios web rápidos y eficientes.
+      </header>
+
+      <article class="text-lg sm:text-2xl font-thin text-gray-200 leading-9">
+        <h2 class="text-3xl sm:text-4xl font-semibold mb-4">Sobre mí</h2>
+        <p>
+          Soy un desarrollador web apasionado por las tecnologías modernas, y este proyecto lo creé como una forma de
+          practicar Astro mientras comparto mis conocimientos con otros. Mi objetivo es enseñar a los desarrolladores a
+          aprovechar las ventajas de Astro para crear sitios web rápidos y eficientes.
+        </p>
         <br />
+        <p>
+          A través de AstroTips, espero ofrecer consejos prácticos, recursos útiles y ejemplos de código que puedan
+          ayudar a otros a mejorar sus habilidades en el desarrollo web. Este proyecto es tanto un desafío personal como
+          una oportunidad para colaborar y aprender con la comunidad.
+        </p>
         <br />
-        A través de AstroTips, espero ofrecer consejos prácticos, recursos útiles y ejemplos de código que puedan ayudar
-        a otros a mejorar sus habilidades en el desarrollo web. Este proyecto es tanto un desafío personal como una oportunidad
-        para colaborar y aprender con la comunidad.
-        <br />
-        <br />
-        Este proyecto también me permite explorar nuevas formas de mejorar la experiencia de desarrollo y de usuario. Me
-        entusiasma la idea de poder optimizar el rendimiento de sitios web y simplificar los flujos de trabajo de desarrollo
-        mediante el uso de Astro. Al compartir mis avances y soluciones, quiero fomentar una comunidad de aprendizaje en
-        la que todos podamos crecer y avanzar juntos.
-      </p>
+        <p>
+          Este proyecto también me permite explorar nuevas formas de mejorar la experiencia de desarrollo y de usuario.
+          Me entusiasma la idea de poder optimizar el rendimiento de sitios web y simplificar los flujos de trabajo de
+          desarrollo mediante el uso de Astro. Al compartir mis avances y soluciones, quiero fomentar una comunidad de
+          aprendizaje en la que todos podamos crecer y avanzar juntos.
+        </p>
+      </article>
     </div>
+    <BorderBeam />
   </div>
-  <BorderBeam />
 </section>

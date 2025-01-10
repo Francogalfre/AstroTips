@@ -4,19 +4,24 @@ import RetroGrid from "./ui/retro-grid";
 ---
 
 <section
-  class="relative bg-cover h-96 flex justify-center items-center flex-col text-center gap-8 w-full bg-[#100d2a59]"
+  class="relative bg-cover h-auto py-16 px-6 flex justify-center items-center flex-col text-center gap-6 md:gap-8 w-full bg-[#100d2a59]"
   style="background-image: url('/BackgroundCTA.webp');"
+  aria-labelledby="cta-heading"
 >
   <div>
-    <h1 class="text-5xl font-bold text-white">¡Comienza a Aprender sobre Astro ahora!</h1>
+    <h1 id="cta-heading" class="text-3xl sm:text-3xl md:text-[46px] font-bold text-white" aria-live="polite">
+      ¡Comienza a Aprender sobre Astro ahora!
+    </h1>
   </div>
-  <p class="mt-4 text-xl font-thin text-gray-200 leading-9">
-    Explora los consejos y recursos de AstroTips para mejorar tus habilidades en desarrollo web con Astro.
-    <br />
-    Descubre nuevas técnicas y trucos que te ayudarán a crear sitios web más rápidos y eficientes.
+
+  <p class="mt-4 text-xl md:text-2xl font-extralight text-gray-200 leading-9 prose" aria-describedby="cta-description">
+    Explora los consejos y recursos de AstroTips para mejorar tus habilidades en desarrollo web con Astro. Descubre
+    nuevas técnicas y trucos que te ayudarán a crear sitios web más rápidos y eficientes.
   </p>
 
   <RetroGrid />
 
-  <a href="/tips"><InteractiveHoverButton text="Empieza Ahora!" /></a>
+  <a href="/tips" class="inline-block mt-6" aria-label="Ir a los consejos sobre Astro">
+    <InteractiveHoverButton text="Empieza Ahora!" />
+  </a>
 </section>
