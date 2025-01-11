@@ -19,18 +19,20 @@ const MyAccordion = ({ tips }: { tips: Tip[] }) => {
 
   const handleCopy = (example: string) => {
     navigator.clipboard.writeText(example);
-    toast.success("¡Copiado al portapapeles!", {
+
+    toast("¡Copiado en el portapapeles!", {
       style: {
-        backgroundColor: "#333",
+        width: "300px",
+        backgroundColor: "#0b0c38",
         color: "#d1d5db ",
-        fontSize: "16px",
-        padding: "12px",
+        fontSize: "15px",
+        padding: "14px",
         borderRadius: "8px",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        opacity: 0.8,
+        opacity: 0.9,
       },
       autoClose: 3000,
-      position: "top-right",
+      position: "bottom-right",
+      theme: "dark",
     });
   };
 
@@ -57,7 +59,7 @@ const MyAccordion = ({ tips }: { tips: Tip[] }) => {
                 <h2 className="text-white text-2xl sm:text-3xl font-bold">{tip.title}</h2>
                 <AccordionContent className="text-base sm:text-xl prose-2xl w-full text-gray-300 whitespace-pre-line">
                   {tip.content}
-                  <pre className="prose bg-gray-900 text-white p-2 rounded-xl overflow-auto mt-6 mb-4 w-full text-end">
+                  <pre className="prose bg-gray-900 text-white rounded-xl overflow-auto mt-6 w-full text-end">
                     <code className="text-gray-300 text-start text-sm block whitespace-pre-wrap">{tip.example}</code>
                     <button
                       className="text-gray-300 hover:text-gray-400 transition-colors p-2 rounded-lg text-sm"
