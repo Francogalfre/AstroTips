@@ -1,15 +1,20 @@
 ![AstroTips Mockup](https://i.imgur.com/SiuSSRi.jpeg)
 
-# AstroTips 🔭
-
 Welcome to **AstroTips**! 🚀 A fun and informative website I created while learning Astro.
 If you're curious about Astro or looking for helpful tips and tricks, you've come to the right place! 😄
+
+<br/>
 
 ## What is Astro? 🤔
 
 Astro is a modern front-end framework for building fast websites. It allows you to build websites with your favorite UI components and deliver them as static HTML, which makes your site super fast 🚀. Learn more about it here: [astro.build](https://astro.build).
 
+<br/>
+
 ![AstroTips Mockup](https://i.imgur.com/OGjnr4F.jpeg)
+
+
+<br/>
 
 ## 🚀 About the Project
 
@@ -17,7 +22,13 @@ AstroTips is a simple web app built with Astro, TypeScript, Tailwind CSS, and AO
 
 In addition to the tips section, I also included some basic information about Astro, making it a great starting point for those who are new to this framework.
 
+
+<br/>
+
 🔗 **Live Demo:** [https://astrotips.vercel.app](https://astrotips.vercel.app)
+
+
+<br/>
 
 ## ⚙️ Technologies Used
 
@@ -27,6 +38,8 @@ In addition to the tips section, I also included some basic information about As
 - **AOS**: For scroll animations to make the site interactive and engaging.
 - **Figma**: All the design work was done by me in Figma to ensure a smooth, aesthetic experience.
 
+<br/>
+
 ## 🛠️ Features
 
 - Clean, minimalist design 🎨
@@ -34,7 +47,12 @@ In addition to the tips section, I also included some basic information about As
 - A collection of tips and tricks for working with Astro 🧑‍💻
 - Smooth animations using AOS 🪄
 
+<br/>
+
 ![AstroTips Mockup](https://i.imgur.com/f1KZasI.jpeg)
+
+
+<br/>
 
 ## 📖 Installation
 
@@ -52,9 +70,15 @@ npm run dev
 
 Open your brower and navigate to http://localhost:4321 to see the project.
 
+
+<br/>
+
 ## 📝 Design
 
 I designed the website myself using Figma, aiming for a minimalist and aesthetic look. The goal was to create a modern and smooth browsing experience for users.
+
+
+<br/>
 
 ## 🎉 Contribution
 
