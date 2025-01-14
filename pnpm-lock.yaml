@@ -23,6 +23,9 @@ dependencies:
   '@types/react-dom':
     specifier: ^19.0.2
     version: 19.0.2(@types/react@19.0.2)
+  '@vercel/analytics':
+    specifier: ^1.4.1
+    version: 1.4.1(react@19.0.0)
   aos:
     specifier: ^2.3.4
     version: 2.3.4
@@ -1691,6 +1694,35 @@ packages:
 
   /@ungap/structured-clone@1.2.1:
     resolution: {integrity: sha512-fEzPV3hSkSMltkw152tJKNARhOupqbH96MZWyRjNaYZOMIzbrTeQDG+MTc6Mr2pgzFQzFxAfmhGDNP5QK++2ZA==}
+    dev: false
+
+  /@vercel/analytics@1.4.1(react@19.0.0):
+    resolution: {integrity: sha512-ekpL4ReX2TH3LnrRZTUKjHHNpNy9S1I7QmS+g/RQXoSUQ8ienzosuX7T9djZ/s8zPhBx1mpHP/Rw5875N+zQIQ==}
+    peerDependencies:
+      '@remix-run/react': ^2
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19 || ^19.0.0-rc
+      svelte: '>= 4'
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@remix-run/react':
+        optional: true
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
+    dependencies:
+      react: 19.0.0
     dev: false
 
   /@vitejs/plugin-react@4.3.4(vite@6.0.7):
