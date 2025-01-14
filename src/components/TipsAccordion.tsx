@@ -51,12 +51,15 @@ const MyAccordion = ({ tips }: { tips: Tip[] }) => {
                 key={tip.id}
                 className="border-b border-gray-500 pb-10 pt-10 w-full"
               >
+                <Badge
+                  variant={"outline"}
+                  className="text-[#cfa9eb] border-[#a580c0] text-sm sm:text-lg font-medium mb-4 "
+                >
+                  Tip {tip.id}
+                </Badge>
                 <AccordionTrigger className="text-xl">
-                  <Badge variant={"outline"} className="text-gray-300 text-sm sm:text-lg font-medium">
-                    Tip {tip.id}
-                  </Badge>
+                  <h2 className="text-white text-2xl sm:text-3xl font-bold">{tip.title}</h2>
                 </AccordionTrigger>
-                <h2 className="text-white text-2xl sm:text-3xl font-bold">{tip.title}</h2>
                 <AccordionContent className="text-base sm:text-xl prose-2xl w-full text-gray-300 whitespace-pre-line">
                   {tip.content}
                   <pre className="prose bg-gray-900 text-white rounded-xl overflow-auto mt-6 w-full text-end">

@@ -34,12 +34,19 @@ import { TIPS } from "@/lib/data";
 
 <script>
   const form = document.querySelector("form");
+  const inputSearch = document.querySelector("input");
+
+  const searchValue = new URLSearchParams(window.location.search).get("search");
+
+  if (inputSearch && searchValue) {
+    inputSearch.value = searchValue;
+  }
 
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    const search = formData.get("search")!.toString().toLowerCase();
+    const search = formData.get("search")!.toString();
 
     const url = new URL("/tips", window.location.origin);
     url.searchParams.set("search", search);
