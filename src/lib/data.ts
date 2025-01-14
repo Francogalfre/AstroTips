@@ -8,10 +8,10 @@ export interface Tip {
 export const TIPS: Tip[] = [
   {
     id: 1,
-    title: "Optimiza el Rendimiento con Islas de JavaScript",
+    title: "Optimiza el rendimiento con islas de Javascript",
     content: `
       Una de las características clave de Astro es la arquitectura de islas, que permite mejorar el rendimiento cargando JavaScript solo cuando es necesario.\n
-      Puedes usar directivas como client:load, client:idle y client:visible para especificar cuándo y cómo cargar los componentes interactivos en el cliente.
+      Puedes usar directivas como client:load, client:idle y client:visible para especificar cuándo y cómo cargar los componentes interactivos en el cliente.\n
       Esto significa que puedes tener una página que se carga rápidamente y solo carga el JavaScript necesario cuando el usuario interactúa con partes específicas de la página.\n
       Por ejemplo, si tienes un slider o un formulario dinámico, puedes cargar el código JavaScript solo cuando el usuario vea o interactúe con ese componente en particular.
     `,
@@ -25,7 +25,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 2,
-    title: "Utiliza Componentes SFC (Single File Components)",
+    title: "Utiliza componentes SFC (Single File Components)",
     content: `
       Astro permite utilizar componentes de un solo archivo (SFC) para mantener tu código modular y organizado.\n
       Puedes definir la estructura HTML, el CSS y la lógica de un componente en un solo archivo, lo que facilita la gestión y reutilización de componentes.
@@ -49,7 +49,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 3,
-    title: "Gestiona Contenido con Archivos Markdown",
+    title: "Gestiona contenido con archivos Markdown",
     content: `
       Si tu sitio web contiene contenido que cambia frecuentemente, como un blog o una lista de tips, es una buena práctica almacenar ese contenido en archivos Markdown.\n
       Astro tiene una integración nativa con Markdown, lo que te permite procesar los archivos Markdown durante la compilación y mostrarlos como HTML en la página.
@@ -66,7 +66,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 4,
-    title: "Uso de Componentes de Otros Frameworks",
+    title: "Uso de componentes de otros frameworks",
     content: `
       Astro permite integrar componentes de otros frameworks como React, Vue o Svelte.\n
       Esta capacidad te permite aprovechar la rica funcionalidad de estos frameworks sin tener que escribir código adicional o comprometer el rendimiento de tu sitio.
@@ -82,7 +82,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 5,
-    title: "Renderizado Estático de Páginas Dinámicas",
+    title: "Renderizado estático de páginas dinámicas",
     content: `
       Astro permite renderizar contenido dinámico de forma estática utilizando datos externos, como archivos JSON, CMS o cualquier otra fuente de datos.\n
       Puedes usar la función Astro.fetchContent() para importar estos datos y luego generar páginas estáticas basadas en ellos.
@@ -98,7 +98,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 6,
-    title: "Usa Rutas Dinámicas para Páginas Personalizadas",
+    title: "Usa rutas dinámicas para páginas personalizadas",
     content: `
       Astro te permite crear rutas dinámicas para manejar contenido personalizado.\n
       Por ejemplo, si estás creando un blog, puedes configurar una ruta dinámica para mostrar diferentes publicaciones basadas en el ID de la publicación.
@@ -110,7 +110,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 7,
-    title: "Optimiza Imágenes Automáticamente",
+    title: "Optimiza imágenes automáticamente",
     content: `
       Astro incluye soporte integrado para la optimización de imágenes.\n
       Puedes aprovechar esta funcionalidad para reducir el tamaño de las imágenes y mejorar los tiempos de carga.
@@ -122,7 +122,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 8,
-    title: "Implementa Estilos CSS Scoped",
+    title: "Implementa estilos CSS Scoped",
     content: `
       Astro permite usar estilos CSS scoped para que los estilos sean específicos de un componente.\n
       Esto previene conflictos de estilo entre componentes y asegura que los estilos sean aplicados únicamente al componente al que pertenecen.
@@ -152,7 +152,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 10,
-    title: "Utiliza Scripts Externos con Cuidado",
+    title: "Utiliza scripts externos con cuidado",
     content: `
       Cuando necesites usar scripts externos, asegúrate de cargarlos de forma asincrónica o diferida para no bloquear el renderizado de la página.\n
       Esto ayuda a mejorar el tiempo de carga y el rendimiento general del sitio.
@@ -163,7 +163,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 11,
-    title: "Aprovecha el Build System Integrado",
+    title: "Aprovecha el Build System integrado",
     content: `
       Astro incluye un sistema de compilación integrado que te permite manejar tareas como la optimización de CSS y JavaScript, generación de imágenes y más.\n
       Esto simplifica el flujo de trabajo de desarrollo y asegura que tu proyecto esté optimizado para producción.
@@ -174,7 +174,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 12,
-    title: "Configura Alias para Rutas de Importación",
+    title: "Configura alias para rutas de importación",
     content: `
       Puedes configurar alias para rutas de importación en Astro, lo que facilita la importación de módulos y componentes.\n
       Esto mejora la legibilidad del código y reduce errores relacionados con rutas incorrectas.
@@ -185,7 +185,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 13,
-    title: "Usa Variables de Entorno para Configuraciones",
+    title: "Usa variables de entorno para configuraciones",
     content: `
       Astro permite el uso de variables de entorno para manejar configuraciones sensibles y específicas del entorno.\n
       Esto es útil para almacenar claves API, configuraciones de base de datos y otros valores que pueden cambiar entre entornos de desarrollo y producción.
@@ -196,7 +196,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 14,
-    title: "Implementa Lazy Loading para Imágenes",
+    title: "Implementa Lazy Loading para imágenes",
     content: `
       Implementa lazy loading para imágenes en tu proyecto de Astro para mejorar los tiempos de carga y la experiencia del usuario.\n
       Esto significa que las imágenes solo se cargarán cuando estén cerca de entrar en la vista del usuario, reduciendo la carga inicial de la página.
@@ -207,7 +207,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 15,
-    title: "Usa Astro Components para Reutilización",
+    title: "Usa Astro Components para reutilización",
     content: `
       Crea componentes reutilizables en Astro para evitar duplicación de código y facilitar el mantenimiento.\n
       Puedes definir componentes para elementos comunes como botones, encabezados y tarjetas, y reutilizarlos en todo el proyecto.
@@ -218,7 +218,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 16,
-    title: "Configura Redirecciones en Astro",
+    title: "Configura redirecciones en astro",
     content: `
       Astro te permite configurar redirecciones en tu proyecto para manejar rutas obsoletas o incorrectas.\n
       Esto mejora la experiencia del usuario al asegurarse de que siempre sean dirigidos a la página correcta.
@@ -229,7 +229,7 @@ export const TIPS: Tip[] = [
   },
   {
     id: 17,
-    title: "Monitorea el Rendimiento con Lighthouse",
+    title: "Monitorea el rendimiento con Lighthouse",
     content: `
       Usa herramientas como Lighthouse para monitorear y optimizar el rendimiento de tu sitio construido con Astro.\n
       Lighthouse proporciona métricas detalladas sobre el rendimiento, accesibilidad y mejores prácticas para ayudarte a mejorar continuamente tu proyecto.
@@ -240,36 +240,41 @@ export const TIPS: Tip[] = [
   },
   {
     id: 18,
-    title: "Configura Paginas 404 Personalizadas",
+    title: "Configura páginas 404 personalizadas",
     content: `
-      Configura una página 404 personalizada en Astro para manejar errores de navegación de manera elegante.\n
-      Esto no solo mejora la experiencia del usuario, sino que también permite agregar elementos visuales o sugerencias para dirigir al usuario a otras partes del sitio.
+      Puedes configurar una página 404 personalizada para tu proyecto de Astro para mejorar la experiencia de usuario cuando accedan a una página inexistente.\n
+      Esto proporciona una experiencia más profesional y consistente en todo tu sitio.
     `,
     example: `
-      <Route path="/404" component={NotFoundPage} />
+      <Route path="*" component={NotFoundPage} />
     `,
   },
   {
     id: 19,
-    title: "Mejora la Accesibilidad con Astro",
+    title: "Optimize your build with custom directives",
     content: `
-      Astro facilita la creación de sitios web accesibles.\n
-      Puedes usar etiquetas ARIA y asegurarte de que tus componentes sean completamente accesibles para usuarios con discapacidades.\n
-      Esto mejora la experiencia del usuario y garantiza que tu sitio cumpla con las normativas de accesibilidad.
+      Astro allows you to define custom build directives that can optimize your project by handling specific requirements or behaviors.\n
+      This is useful for advanced optimizations or specific use cases like conditional rendering or environment-specific configurations.
     `,
     example: `
-      <button aria-label="Close" onClick={handleClick}>Close</button>
+      <script client:only="react" src="react.js"></script>
     `,
   },
   {
     id: 20,
-    title: "Aprovecha el Sistema de Plantillas de Astro",
+    title: "Aprovecha el sistema de plugins de astro",
     content: `
-      Astro tiene un sistema de plantillas flexible que te permite reutilizar estructuras de página en todo tu proyecto.\n
-      Esto te ayuda a mantener un diseño consistente y facilita el mantenimiento y la ampliación del proyecto.
+      Astro tiene un sistema de plugins que te permite extender la funcionalidad de tu proyecto fácilmente.\n
+      Puedes agregar nuevos comportamientos, optimizaciones o integraciones con herramientas de terceros mediante plugins. Estos pueden ayudar con tareas como la minificación de código, la gestión de imágenes, la integración de CMS y más.\n
+      Utilizar plugins adecuados puede mejorar la productividad y la calidad de tu proyecto sin necesidad de crear todo desde cero.
     `,
     example: `
-      <Template src="/templates/main.astro" />
+      import { defineConfig } from 'astro/config';
+      import myPlugin from '@astro/plugin';
+      
+      export default defineConfig({
+        integrations: [myPlugin()],
+      });
     `,
   },
 ];
